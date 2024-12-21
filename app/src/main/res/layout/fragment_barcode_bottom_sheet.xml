@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bottomSheetBackground">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/darkGrayBackground"
+            android:padding="24dp">
+
+
+
+            <View
+                android:layout_width="32dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/battom_sheet_handle"
+                android:layout_marginBottom="24dp"/>
+            <SeekBar
+                android:id="@+id/brightnessSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:progressDrawable="@drawable/custom_seekbar"
+                android:thumb="@drawable/custom_thumb"
+                android:splitTrack="false"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:minHeight="6dp" />
+
+            <ImageView
+                android:id="@+id/imageViewBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp"
+                android:scaleType="fitCenter" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewBarcodeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewBarcodeType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:textColor="?android:attr/textColorSecondary"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonCopyBarcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/darkGrayBackground"
+                android:text="Kopyala"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.core.widget.NestedScrollView>

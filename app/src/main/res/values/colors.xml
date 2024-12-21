@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Ana renkler (mavi tonları) -->
+    <color name="colorPrimary">#1E88E5</color>         <!-- Daha açık mavi -->
+    <color name="colorPrimaryDark">#1565C0</color>     <!-- Koyu mavi -->
+    <color name="colorAccent">#40C4FF</color>          <!-- Açık mavi vurgu -->
+
+    <!-- Koyu tema renkleri -->
+    <color name="windowBackground">#121212</color>     <!-- Çok koyu gri, neredeyse siyah -->
+    <color name="surfaceColor">#1E1E1E</color>         <!-- Biraz daha açık koyu gri -->
+    <color name="textColorPrimary">#FFFFFF</color>     <!-- Beyaz metin -->
+    <color name="textColorSecondary">#B3FFFFFF</color> <!-- %70 opak beyaz -->
+
+    <!-- Özel bileşen renkleri -->
+    <color name="navigationBarColor">@color/zxing_transparent</color>   <!-- Siyah -->
+    <color name="statusBarColor">@color/colorPrimaryDark</color>
+    <color name="transparent">@color/zxing_transparent</color>   <!-- Siyah -->
+
+    <color name="rippleColor">#33FFFFFF</color>        <!-- %20 opak beyaz -->
+
+    <!-- Diğer UI element renkleri -->
+    <color name="cardBackground">#2C2C2C</color>       <!-- Biraz daha açık koyu gri -->
+    <color name="dividerColor">#1FFFFFFF</color>       <!-- %12 opak beyaz -->
+    <!-- Yeni eklenen koyu gri renk -->
+    <color name="darkGrayBackground">#2C2C2C</color>
+
+    <!-- Bottom sheet için koyu gri arka plan -->
+    <color name="bottomSheetBackground">@color/zxing_transparent</color>
+    <color name="background">#FAFAFA</color>
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#757575</color>
+    <color name="divider">#BDBDBD</color>
+
+</resources>

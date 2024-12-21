@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Ana renkler -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Genel tema renkleri -->
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="colorSurface">@color/surfaceColor</item>
+        <item name="colorOnSurface">@color/textColorPrimary</item>
+
+        <!-- Durum çubuğu ve gezinme çubuğu -->
+        <item name="android:statusBarColor">@color/statusBarColor</item>
+        <item name="android:navigationBarColor">@color/navigationBarColor</item>
+
+        <!-- Materyal bileşenleri için renk ayarları -->
+        <item name="materialCardViewStyle">@style/AppTheme.CardView</item>
+        <item name="bottomSheetDialogTheme">@style/AppTheme.BottomSheetDialog</item>
+    </style>
+
+    <!-- Card View stili -->
+    <style name="AppTheme.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/cardBackground</item>
+        <item name="rippleColor">@color/rippleColor</item>
+    </style>
+
+    <!-- Bottom Sheet Dialog stili -->
+    <style name="AppTheme.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppTheme.DarkGrayBottomSheet</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/navigationBarColor</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <!-- Koyu Gri Bottom Sheet stili -->
+    <style name="AppTheme.DarkGrayBottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="backgroundTint">@color/zxing_transparent</item>
+        <item name="shapeAppearanceOverlay">@style/AppTheme.BottomSheet.ShapeAppearanceOverlay</item>
+    </style>
+
+    <!-- Bottom Sheet köşe yuvarlama stili -->
+    <style name="AppTheme.BottomSheet.ShapeAppearanceOverlay" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+    <!-- values/themes.xml -->
+    <style name="Theme.ProApp.Fullscreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Temel Metin Stili -->
+    <style name="TextAppearance.App.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.App.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">@color/textColorSecondary</item>
+    </style>
+
+    <!-- Buton Stili -->
+    <style name="Widget.App.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="rippleColor">@color/rippleColor</item>
+    </style>
+
+    <!-- Düz Buton Stili -->
+    <style name="Widget.App.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="rippleColor">@color/rippleColor</item>
+    </style>
+
+    <!-- EditText Stili -->
+    <style name="Widget.App.EditText" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">@color/surfaceColor</item>
+        <item name="boxStrokeColor">@color/colorAccent</item>
+        <item name="hintTextColor">@color/textColorSecondary</item>
+    </style>
+
+    <!-- Switch Stili -->
+    <style name="Widget.App.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="thumbTint">@color/colorAccent</item>
+        <item name="trackTint">@color/colorPrimaryDark</item>
+    </style>
+
+    <!-- ImageButton Stili -->
+    <style name="Widget.App.ImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:tint">@color/colorAccent</item>
+    </style>
+
+    <!-- ProgressBar Stili -->
+    <style name="Widget.App.ProgressBar" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminateTint">@color/colorAccent</item>
+    </style>
+
+    <!-- AlertDialog Stili -->
+    <style name="ThemeOverlay.App.AlertDialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.App.Button.TextButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.App.Button.TextButton</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.App.Button.TextButton</item>
+        <item name="android:background">@color/surfaceColor</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+    </style>
+
+    <!-- Toolbar Stili -->
+    <style name="Widget.App.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="titleTextColor">@color/textColorPrimary</item>
+        <item name="subtitleTextColor">@color/textColorSecondary</item>
+    </style>
+
+    <!-- CardView Stili -->
+    <style name="Widget.App.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/cardBackground</item>
+        <item name="rippleColor">@color/rippleColor</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">8dp</item>
+    </style>
+
+
+
+</resources>

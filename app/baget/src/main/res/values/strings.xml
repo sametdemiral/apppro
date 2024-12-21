@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ürün Uygulaması</string>
+    <string name="barkod_hint">Barkod</string>
+    <string name="urun_adi_hint">Ürün Adı</string>
+    <string name="kg_fiyati_hint">Kg Fiyatı</string>
+    <string name="ekle_button">Ürün Ekle</string>
+    <string name="ara_button">Ürün Ara</string>
+</resources>
