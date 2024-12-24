@@ -1,4 +1,4 @@
-package com.samet.proapp.model
+package com.samet.proapp.uı
 
 import android.app.Activity
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.samet.proapp.database.Group
+import com.samet.proapp.model.Group
 import com.samet.proapp.R
 import com.samet.proapp.database.CSVHelper
 

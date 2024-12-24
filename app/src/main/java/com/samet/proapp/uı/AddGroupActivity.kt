@@ -1,19 +1,22 @@
-package com.samet.proapp.model
+package com.samet.proapp.uı
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 import com.samet.proapp.database.DatabaseHelper
-import com.samet.proapp.database.Group
+import com.samet.proapp.model.Group
 import com.samet.proapp.R
 
-class AddGroupActivity : AppCompatActivity() {
+class AddGroupActivity(view: View) : AppCompatActivity() {
 
     private lateinit var editTextGroupName: EditText
     private lateinit var buttonSaveGroup: Button
     private lateinit var dbHelper: DatabaseHelper
+    val rootView = findViewById<View>(android.R.id.content)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +39,8 @@ class AddGroupActivity : AppCompatActivity() {
             if (groupName.isNotEmpty()) {
                 saveGroup(groupName)
             } else {
-                Toast.makeText(this, "Lütfen bir grup adı girin", Toast.LENGTH_SHORT).show()
+                Snackbar.make(rootView, "Lütfen bir grup adı girin", Snackbar.ANIMATION_MODE_SLIDE).show()
+                //Toast.makeText(this, "Lütfen bir grup adı girin", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -49,7 +53,8 @@ class AddGroupActivity : AppCompatActivity() {
             setResult(RESULT_OK)
             finish()
         } else {
-            Toast.makeText(this, "Grup eklenirken bir hata oluştu", Toast.LENGTH_SHORT).show()
+            Snackbar.make(rootView,"Hata!",Snackbar.ANIMATION_MODE_SLIDE).show()
+            //Toast.makeText(this, "Grup eklenirken bir hata oluştu", Toast.LENGTH_SHORT).show()
         }
     }
 }

@@ -6,48 +6,26 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
+
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
-        android:enableOnBackInvokedCallback="true"
         android:allowBackup="true"
+        android:enableOnBackInvokedCallback="true"
         android:icon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <provider
-            android:name="androidx.core.content.FileProvider"
-            android:authorities="${applicationId}.provider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
-        </provider>
-        <provider
-            android:name="androidx.core.content.FileProvider"
-            android:authorities="${applicationId}.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
-        </provider>
-        <provider
-            android:name="androidx.core.content.FileProvider"
-            android:authorities="${applicationId}.provider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
-        </provider>
+
+        <!-- Main activity with launcher intent -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -56,24 +34,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".FullScreenActivity"
-            android:theme="@style/Theme.ProApp.Fullscreen"
-            android:screenOrientation="fullSensor" />
 
-        <activity android:name=".AddGroupActivity" />
-        <activity android:name=".GroupDetailActivity" />
-        <activity android:name=".CameraActivity" />
-        <activity android:name=".BarcodeScannerActivity" />
-        <activity android:name=".AddProductActivity"/>
-        <activity android:name=".CSVExportActivity" />
-        <activity android:name=".BarcodeActivity"/>
-        <activity android:name=".UpdateDatabaseActivity" />
-        <activity android:name=".SaveReceiptActivity" />
-        <activity android:name=".ViewReceiptsActivity" />
-        <activity android:name=".SavedBarcodesNameActivity"/>
+        <!-- Other activities -->
+        <activity android:name=".uı.FullScreenActivity" android:theme="@style/Theme.ProApp.Fullscreen" />
+        <activity android:name=".uı.AddGroupActivity" />
+        <activity android:name=".uı.GroupDetailActivity" />
+        <activity android:name=".uı.CameraActivity" />
+        <activity android:name=".uı.BarcodeScannerActivity" />
+        <activity android:name=".uı.AddProductActivity" />
+        <activity android:name=".uı.CSVExportActivity" />
+        <activity android:name=".uı.BarcodeActivity" />
+        <activity android:name=".uı.UpdateDatabaseActivity" />
+        <activity android:name=".uı.SaveReceiptActivity" />
+        <activity android:name=".uı.ViewReceiptsActivity" />
+        <activity android:name=".uı.SavedBarcodesNameActivity" />
 
-
+        <!-- Single FileProvider declaration -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
@@ -83,7 +59,5 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
-
     </application>
-
 </manifest>

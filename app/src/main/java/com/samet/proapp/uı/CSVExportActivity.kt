@@ -1,4 +1,4 @@
-package com.samet.proapp.model
+package com.samet.proapp.uı
 
 import android.content.Intent
 import android.net.Uri

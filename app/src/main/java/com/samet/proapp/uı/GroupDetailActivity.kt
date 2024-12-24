@@ -21,9 +21,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
-import com.samet.proapp.model.AddProductActivity
 import com.samet.proapp.database.DatabaseHelper
-import com.samet.proapp.database.Group
+import com.samet.proapp.model.Group
 import com.samet.proapp.R
 import com.samet.proapp.database.CSVHelper
 import java.util.Locale

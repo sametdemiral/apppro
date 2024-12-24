@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.android.material.button.MaterialButton
 import com.samet.proapp.R
+import com.samet.proapp.model.Receipt
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -37,13 +38,13 @@ class ReceiptAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val receipt = receipts[position]
 
-        // Resmi yükle
+        // update photo / fotoğrafı yükle
         Glide.with(holder.imageView.context)
             .load(File(receipt.imagePath))
             .centerCrop()
             .into(holder.imageView)
 
-        // Fiş adını ayarla
+        // Fiş adını ayarla / add a receipt name
         holder.nameText.text = receipt.name
 
         // Tarihi formatla ve ayarla

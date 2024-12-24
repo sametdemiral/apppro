@@ -7,11 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.samet.proapp.database.BarcodeHelper
-import com.samet.proapp.database.ProductCursorAdapter
+import com.samet.proapp.uı.ProductCursorAdapter
 import com.samet.proapp.R
-import com.samet.proapp.database.UpdateDatabaseActivity
+import com.samet.proapp.uı.UpdateDatabaseActivity
 import com.samet.proapp.uı.BarcodeActivity
-
+//this model well usage
 class BagetMain : AppCompatActivity() {
     private lateinit var recyclerViewProducts: RecyclerView
     private lateinit var buttonScan: Button
@@ -47,6 +47,6 @@ class BagetMain : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupRecyclerView() // Listeyi güncelle
+        setupRecyclerView() // Listeyi güncelle / update list
     }
 }

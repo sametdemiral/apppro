@@ -15,7 +15,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.switchmaterial.SwitchMaterial
 import com.google.android.material.textfield.TextInputEditText
 import java.util.concurrent.ExecutorService
-
+//tha initialize class
 object BarcodeScannerState {
     lateinit var viewFinder: PreviewView
     lateinit var barcodeImageView: ImageView

@@ -1,5 +1,5 @@
 // SaveReceiptActivity.kt
-package com.samet.proapp.database
+package com.samet.proapp.uı
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -19,6 +19,8 @@ import android.view.View
 import android.widget.*
 import com.samet.proapp.R
 import com.samet.proapp.ZoomableImageView
+import com.samet.proapp.model.Receipt
+import com.samet.proapp.database.ReceiptManager
 
 class SaveReceiptActivity : AppCompatActivity() {
     private lateinit var photoImageView: ZoomableImageView

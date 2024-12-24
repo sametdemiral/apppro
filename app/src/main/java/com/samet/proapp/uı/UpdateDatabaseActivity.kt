@@ -1,4 +1,4 @@
-package com.samet.proapp.database
+package com.samet.proapp.uı
 
 import android.content.Intent
 import android.database.Cursor
@@ -14,7 +14,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.samet.proapp.R
-import com.samet.proapp.uı.BarcodeActivity
+import com.samet.proapp.database.BarcodeHelper
 
 class UpdateDatabaseActivity : AppCompatActivity() {
 
