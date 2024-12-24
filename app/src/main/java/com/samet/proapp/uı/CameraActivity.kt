@@ -1,8 +1,10 @@
 package com.samet.proapp.uı
 
 import android.Manifest
+import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -12,16 +14,19 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.contentValuesOf
+import com.google.android.material.snackbar.Snackbar
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.barcode.common.Barcode
 import com.google.mlkit.vision.common.InputImage
-import com.samet.proapp.database.Group
+import com.samet.proapp.model.Group
 import com.samet.proapp.R
 import com.samet.proapp.database.CSVHelper
+import kotlinx.coroutines.withContext
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
-class CameraActivity : AppCompatActivity() {
+class CameraActivity(context: Context) : AppCompatActivity() {
     private lateinit var viewFinder: PreviewView
     private lateinit var cameraExecutor: ExecutorService
     private lateinit var csvHelper: CSVHelper

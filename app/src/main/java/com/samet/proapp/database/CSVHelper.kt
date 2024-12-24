@@ -1,10 +1,13 @@
 package com.samet.proapp.database
 
 import android.content.Context
+import com.samet.proapp.model.Group
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
-
+//this application saved data in csv file
+//so uninstall app last data in successful phone storage.
+//ann preinstallation for get data in app. (not freebase)
 class CSVHelper(private val context: Context) {
 
     private val baseDir: File = File(context.getExternalFilesDir(null), "ProApp")

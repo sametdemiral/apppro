@@ -14,10 +14,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.samet.proapp.database.DatabaseHelper
-import com.samet.proapp.database.Group
+import com.samet.proapp.model.Group
 import com.samet.proapp.uı.ViewReceiptsActivity
-import com.samet.proapp.model.AddGroupActivity
-import com.samet.proapp.model.CSVExportActivity
+import com.samet.proapp.uı.AddGroupActivity
+import com.samet.proapp.uı.CSVExportActivity
 import com.samet.proapp.uı.BarcodeScannerActivity
 import com.samet.proapp.uı.GroupDetailActivity
 

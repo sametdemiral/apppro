@@ -3,6 +3,7 @@ package com.samet.proapp.database
 
 import android.content.Context
 import android.util.Xml
+import com.samet.proapp.model.Receipt
 import org.xmlpull.v1.XmlPullParser
 import java.io.File
 import java.text.SimpleDateFormat
@@ -11,9 +12,8 @@ import java.util.*
 object ReceiptManager {
     private const val RECEIPTS_FILE = "receipts.xml"
 
-    // Varolan yöntemler...
 
-    // Yeni eklenen updateReceipts metodu
+
     fun updateReceipts(context: Context, receipts: List<Receipt>) {
         val serializer = Xml.newSerializer()
         context.openFileOutput(RECEIPTS_FILE, Context.MODE_PRIVATE).use { outputStream ->

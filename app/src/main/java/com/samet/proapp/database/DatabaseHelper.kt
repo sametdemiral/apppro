@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.samet.proapp.model.Group
 
 class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
@@ -59,6 +60,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         val result = db.delete(TABLE_GROUPS, "$KEY_ID = ?", arrayOf(groupId.toString()))
         return result > 0
     }
+    //this function last usage
     fun updateGroup(group: Group): Int {
         val db = this.writableDatabase
         val values = ContentValues().apply {
@@ -66,7 +68,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         }
         return db.update(TABLE_GROUPS, values, "$KEY_ID = ?", arrayOf(group.id.toString()))
     }
-
+    //use search btn is db foreach
     fun searchGroups(query: String): List<Group> {
         val groupList = mutableListOf<Group>()
         val selectQuery = "SELECT * FROM $TABLE_GROUPS WHERE $KEY_NAME LIKE ?"

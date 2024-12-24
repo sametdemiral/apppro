@@ -12,11 +12,10 @@ import android.widget.TextView
 import androidx.appcompat.widget.SearchView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.samet.proapp.R
-import com.samet.proapp.database.Receipt
+import com.samet.proapp.model.Receipt
 import com.samet.proapp.database.ReceiptAdapter
 import com.samet.proapp.database.ReceiptItemDecoration
 import com.samet.proapp.database.ReceiptManager
-import com.samet.proapp.database.SaveReceiptActivity
 import java.io.File
 import java.util.*
 

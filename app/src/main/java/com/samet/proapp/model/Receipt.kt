@@ -1,5 +1,4 @@
-// Receipt.kt
-package com.samet.proapp.database
+package com.samet.proapp.model
 
 import java.util.Date
 

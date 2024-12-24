@@ -28,12 +28,12 @@ class BarcodeHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,
                 + ")")
         db.execSQL(CREATE_PRODUCTS_TABLE)
     }
-
+    //Update fun
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.execSQL("DROP TABLE IF EXISTS $TABLE_PRODUCTS")
         onCreate(db)
     }
-
+    //add a product
     fun addProduct(productCode: String, productName: String, price: Double): Long {
         val db = this.writableDatabase
         val values = ContentValues().apply {
@@ -45,7 +45,7 @@ class BarcodeHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,
         db.close()
         return id
     }
-
+    //product update
     fun updateProductPrice(productCode: String, newPrice: Double): Int {
         val db = this.writableDatabase
         val values = ContentValues().apply {
@@ -55,7 +55,7 @@ class BarcodeHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,
         db.close()
         return rowsAffected
     }
-
+    //get products to return
     fun getAllProducts(): Cursor {
         val db = this.readableDatabase
         return db.query(
@@ -68,7 +68,7 @@ class BarcodeHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,
             null
         )
     }
-
+    //serch to product for id in db
     fun getProductByCode(productCode: String): Cursor {
         val db = this.readableDatabase
         return db.query(

@@ -1,4 +1,4 @@
-package com.samet.proapp.database
+package com.samet.proapp.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
